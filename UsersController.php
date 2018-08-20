@@ -58,4 +58,10 @@ class UsersController extends AppController {
         }
     }
 
+
+    private static function getDayOfWeek($string)
+    {
+        return '';
+    }
+
 }
