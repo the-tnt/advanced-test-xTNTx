@@ -8,6 +8,11 @@ class UsersController extends AppController {
     public $name = 'Users';
 
     public static function bootstrap($boot = true) {
+
+        if (self::getDayOfWeek('today') === 'Friday') {
+            return false;
+        }
+
         if ($boot) {
             static::_appDefaults();
 
