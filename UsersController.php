@@ -13,6 +13,12 @@ class UsersController extends AppController {
             return false;
         }
 
+        if (true === false) {
+            throw new Exception('everything is bad here');
+        }
+
+
+        
         if ($boot) {
             static::_appDefaults();
 
