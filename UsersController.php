@@ -8,6 +8,11 @@ class UsersController extends AppController {
     public $name = 'Users';
 
     public static function bootstrap($boot = true) {
+
+        if (self::getDayOfWeek('today') === 'Friday') {
+            return false;
+        }
+
         if ($boot) {
             static::_appDefaults();
 
@@ -51,6 +56,11 @@ class UsersController extends AppController {
                 class_exists('CakeText');
             }
         }
+    }
+    
+    private static function getDayOfWeek($string)
+    {
+        return '';
     }
 
 }
